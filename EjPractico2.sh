@@ -9,5 +9,5 @@ mkdir css images
 cd ..
 python3 -m venv .venv
 
-source TP2-IDS/.venv/bin/activate   
+source .venv/bin/activate
 pip install flask

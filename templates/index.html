@@ -4,109 +4,109 @@
 		<title>Rally MTB 2025</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Rally MTB 2025</h1>
-								<p>Organizado por el Club Social y Deportivo Unidos por el Deporte<br/>
-								24 de Octubre de 2025 - Tandil, Buenos Aires</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#info">Información</a></li>
-								<li><a href="#mapa">Recorrido</a></li>
-								<li><a href="#auspiciantes">Auspiciantes</a></li>
-								<li><a href="#kit">Kit y Reglamento</a></li>
-						 		<li><a href="{{ url_for('registration') }}">Inscripción</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Información -->
-						<article id="info">
-							<h2 class="major">Información del Evento</h2>
-							<span class="image main">
-								<img src="{{ url_for('static', filename='images/mtb.jpg') }}" alt="MTB Rural" />
-							</span>	
-							<p>
-								La carrera MTB rural se desarrollará en dos modalidades: <br>
-								<b>Corta:</b> 30 km ($100)<br>
-								<b>Larga:</b> 80 km ($200)<br>
-								<b>Horario:</b> 8:00 am<br>
-								<b>Lugar:</b> Tandil, Buenos Aires
-							</p>
-							<p>Una experiencia única en plena naturaleza con senderos rurales y puntos de hidratación.</p>
-							<a href="{{ url_for('registration') }}" class="button primary">Inscribite acá</a>
-						</article>
-
-						<!-- Mapa -->
-						<article id="mapa">
-  							<h2 class="major">Recorrido</h2>
-  						<div class="map-container">
-    						<iframe 
-      							src="https://www.google.com/maps/embed?pb=...tu-código..."
-      							width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-    						</iframe>
-  						</div>
-  						<p>El circuito atraviesa caminos rurales, senderos y subidas con paisajes únicos. 
-  						La modalidad corta tiene <strong>30 km</strong> y la modalidad larga <strong>80 km</strong>.</p>
-						</article>
-
-
-						<!-- Auspiciantes -->
-						<article id="auspiciantes">
-							<h2 class="major">Auspiciantes</h2>
-							<p>Gracias a quienes hacen posible este evento:</p>
-							<div class="sponsors">
-								<img src="{{ url_for('static', filename='images/ausp1.png') }}" alt="Ausp1" width="120">
-								<img src="{{ url_for('static', filename='images/ausp2.png') }}" alt="Ausp2" width="120">
-								<img src="{{ url_for('static', filename='images/ausp3.png') }}" alt="Ausp3" width="120">
-							</div>
-						</article>
-
-				        <!-- Kit y Reglamento -->
-       					<article id="kit">
-          					<h2 class="major">Kit de Carrera</h2>
-          					<span class="image main"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
-        					<p>Incluye: Número dorsal, remera oficial, chip de cronometraje y medalla finisher.</p>
-      						<p><a href="{{ url_for('static', filename='docs/reglamento.pdf') }}">Descargar reglamento (PDF)</a></p>
-      						<p><a href="{{ url_for('static', filename='docs/deslinde.pdf') }}">Descargar deslinde (PDF)</a></p>
-       					</article>
-
+			<!-- Header -->
+			<header id="header">
+				<div class="logo">
+					<span class="icon fa-gem"></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Rally MTB 2025</h1>
+						<p>Organizado por el Club Social y Deportivo Unidos por el Deporte<br/>
+						24 de Octubre de 2025 - Tandil, Buenos Aires</p>
 					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#info">Información</a></li>
+						<li><a href="#mapa">Recorrido</a></li>
+						<li><a href="#auspiciantes">Auspiciantes</a></li>
+						<li><a href="#kit">Kit y Reglamento</a></li>
+						<li><a href="{{ url_for('registration') }}">Inscripción</a></li>
+					</ul>
+				</nav>
+			</header>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p>Contacto: <a href="mailto:clubunidos@gmail.com">clubunidos@gmail.com</a> | WhatsApp: +54 9 11 1234 5678</p>
-						<p class="copyright">&copy; Club Unidos por el Deporte - 2025</p>
-					</footer>
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Información -->
+				<article id="info">
+					<h2 class="major">Información del Evento</h2>
+					<span class="image main">
+						<img src="{{ url_for('static', filename='images/mtb.jpg') }}" alt="MTB Rural" />
+					</span>	
+					<p>
+						La carrera MTB rural se desarrollará en dos modalidades: <br>
+						<b>Corta:</b> 30 km ($100)<br>
+						<b>Larga:</b> 80 km ($200)<br>
+						<b>Horario:</b> 8:00 am<br>
+						<b>Lugar:</b> Tandil, Buenos Aires
+					</p>
+					<p>Una experiencia única en plena naturaleza con senderos rurales y puntos de hidratación.</p>
+					<a href="{{ url_for('registration') }}" class="button primary">Inscribite acá</a>
+				</article>
+
+				<!-- Mapa -->
+				<article id="mapa">
+					<h2 class="major">Recorrido</h2>
+					<div class="map-container">
+						<iframe 
+							src="https://www.google.com/maps/embed?pb=...tu-código..."
+							width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+						</iframe>
+					</div>
+					<p>El circuito atraviesa caminos rurales, senderos y subidas con paisajes únicos. 
+					La modalidad corta tiene <strong>30 km</strong> y la modalidad larga <strong>80 km</strong>.</p>
+				</article>
+
+				<!-- Auspiciantes -->
+				<article id="auspiciantes">
+					<h2 class="major">Auspiciantes</h2>
+					<p>Gracias a quienes hacen posible este evento:</p>
+					<div class="sponsors">
+						<img src="{{ url_for('static', filename='images/ausp1.jpg') }}" alt="Ausp1" width="120">
+						<img src="{{ url_for('static', filename='images/ausp2.jpg') }}" alt="Ausp2" width="120">
+						<img src="{{ url_for('static', filename='images/ausp3.jpg') }}" alt="Ausp3" width="120">
+					</div>
+				</article>
+
+				<!-- Kit y Reglamento -->
+				<article id="kit">
+					<h2 class="major">Kit de Carrera</h2>
+					<span class="image main"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
+					<p>Incluye: Número dorsal, remera oficial, chip de cronometraje y medalla finisher.</p>
+					<p><a href="{{ url_for('static', filename='docs/reglamento.pdf') }}">Descargar reglamento (PDF)</a></p>
+					<p><a href="{{ url_for('static', filename='docs/deslinde.pdf') }}">Descargar deslinde (PDF)</a></p>
+				</article>
+
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<p>Contacto: <a href="mailto:clubunidos@gmail.com">clubunidos@gmail.com</a> | WhatsApp: +54 9 11 1234 5678</p>
+				<p class="copyright">&copy; Club Unidos por el Deporte - 2025</p>
+			</footer>
+		</div>
+
 		<!-- BG -->
-			<div id="bg"></div>
+		<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
 
 	</body>
 </html>

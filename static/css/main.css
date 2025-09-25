@@ -1659,3 +1659,8 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		.sponsors img{
+			width: 180px;
+			height: 200px;
+		}

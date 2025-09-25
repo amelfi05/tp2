@@ -5,8 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/main.css">
     <noscript><link rel="stylesheet" href="/static/css/noscript.css"></noscript>
-    <title>Contact</title>
+    <title>Inscripción - Rally MTB 2025</title>
 </head>
+<style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.075);
+      padding: 1rem 2rem;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    
+    .navbar nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar nav ul li a:hover {
+      color: #f76c6c;
+    }
+</style>
+
+  <div class="navbar">
+    <a href="{{ url_for('index') }}" class="logo">
+      <span class="icon fa-gem"></span>
+      Rally MTB 2025
+    </a>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}#info">Información</a></li>
+        <li><a href="{{ url_for('index') }}#mapa">Recorrido</a></li>
+        <li><a href="{{ url_for('index') }}#kit">Kit</a></li>
+      </ul>
+    </nav>
+  </div>
+
 <body class="is-preload">
     <div id="wrapper">
         <article id="contact">
@@ -14,31 +60,44 @@
             <form id="contact-form" method="post" action="#">
                 <div class="fields">
                     <div class="field half">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" />
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" required />
                     </div>
                     <div class="field half">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" />
+                        <input type="email" name="email" id="email" required />
                     </div>
                     <div class="field">
-                        <label for="message">Message</label>
+                        <label for="modalidad">Modalidad</label>
+                        <select name="modalidad" id="modalidad" required>
+                            <option value="">Seleccioná una opción</option>
+                            <option value="Corta (30 km)">Corta (30 km)</option>
+                            <option value="Larga (80 km)">Larga (80 km)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="message">Mensaje</label>
                         <textarea name="message" id="message" rows="4"></textarea>
                     </div>
                 </div>
                 <ul class="actions">
-                    <li><input type="submit" value="Send Message" class="primary" /></li>
-                    <li><input type="reset" value="Reset" /></li>
+                    <li><input type="submit" value="Enviar mensaje" class="primary" /></li>
+                    <li><input type="reset" value="Resetear" /></li>
                 </ul>
             </form>
+
             <ul class="icons">
-                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://x.com/?lang=es" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.facebook.com/?locale=es_LA" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://github.com/amelfi05/tp2" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
             </ul>
         </article>
     </div>
+    <footer style="text-align: center;">
+        <p>Contacto: <a href="mailto:clubunidos@gmail.com">clubunidos@gmail.com</a> | WhatsApp: +54 9 11 1234 5678</p>
+        <p class="copyright">&copy; Club Unidos por el Deporte - 2025</p>
+    </footer>
 </body>
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>

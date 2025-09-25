@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <noscript><link rel="stylesheet" href="/static/css/noscript.css"></noscript>
     <title>Contact</title>
 </head>
 <body class="is-preload">
@@ -41,21 +41,14 @@
     </div>
 </body>
 
-    <script>
-    const form = document.getElementById('contact-form');
-    alert('Mensaje enviado con éxito 😊'); //para el portfolio xq sino me van a spamear el mail
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
+<script>
+  const form = document.getElementById('contact-form');
 
-      emailjs.sendForm('service_34s96se', 'template_tw28hwe', this)
-        .then(() => {
-          alert('Message sent! Stay tuned😊');
-          form.reset();
-        }, (error) => {
-          alert('Error sending message, try again! 😢');
-          console.error('EmailJS error:', error);
-        });
-    });
-  </script>
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Mensaje enviado con éxito 😊');
+    form.reset();
+  });
+</script>
 
 </html>

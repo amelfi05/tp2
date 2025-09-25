@@ -41,13 +41,23 @@
     </div>
 </body>
 
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
+  emailjs.init("JbtJ0bN4J1ri7Loxf"); // Reemplazá con tu public key real
+
   const form = document.getElementById('contact-form');
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Mensaje enviado con éxito 😊');
-    form.reset();
+
+    emailjs.sendForm('service_mu3s4b7', 'template_ftr1kfm', this)
+      .then(() => {
+        alert('Mensaje enviado con éxito 😊');
+        form.reset();
+      }, (error) => {
+        alert('Hubo un error al enviar el mensaje 😢');
+        console.error('EmailJS error:', error);
+      });
   });
 </script>
 

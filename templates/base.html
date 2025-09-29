@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{{ info.nombre }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        {% block contenido %}{% endblock %}
+        <footer id="footer">
+        <p>Contacto: <a href="mailto:clubunidos@gmail.com">clubunidos@gmail.com</a></p>
+        <p class="copyright">&copy; Club Unidos por el Deporte - 2025</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

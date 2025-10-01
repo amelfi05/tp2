@@ -1,13 +1,9 @@
 #!/bin/bash
+set -e #Corta si algo falla
 
-mkdir TP2-IDS
-cd TP2-IDS
-touch app.py 
-mkdir static templates
-cd static
-mkdir css images
-cd ..
-python3 -m venv .venv
+ROOT="TP2-IDS"
+VENV_DIR="$ROOT/.venv"
 
-source .venv/bin/activate
-pip install flask
+mkdir -p "$ROOT/static/css" "$ROOT/static/images" "$ROOT/templates"
+touch "$ROOT/app.py"
+python3 -m venv "$VENV_DIR"
